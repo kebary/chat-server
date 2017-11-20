@@ -4,6 +4,10 @@
 
 https://github.com/syndbg/goenv
 
+## glide
+
+https://github.com/Masterminds/glide
+
 ## echo
 
 https://github.com/labstack/echo
@@ -14,8 +18,11 @@ https://github.com/labstack/echo
 install goenv
 公式を参照
 
-install echo
-$ go get -u github.com/labstack/echo/...
+install glide
+$ brew install glide
+
+install package
+$ glide install
 
 server start
 go run server.go
