@@ -25,5 +25,5 @@ install package
 $ glide install
 
 server start
-go run server.go
+$ go run server.go
 ```
