@@ -4,11 +4,15 @@
 
 https://github.com/syndbg/goenv
 
-## glide
+## direnv(PATH)
 
-https://github.com/Masterminds/glide
+https://github.com/direnv/direnv
 
-## echo
+## dep（module management）
+
+https://github.com/golang/dep
+
+## echo（framework）
 
 https://github.com/labstack/echo
 
@@ -18,12 +22,15 @@ https://github.com/labstack/echo
 install goenv
 公式を参照
 
-install glide
-$ brew install glide
+install direnv
+公式を参照
 
-install package
-$ glide install
+move to project dir
+$ cd src/app
+
+install modules
+$ dep ensure -update
 
 server start
-go run server.go
+$ go run server.go
 ```
