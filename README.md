@@ -16,6 +16,10 @@ https://github.com/golang/dep
 
 https://github.com/labstack/echo
 
+## ORM
+
+https://github.com/jinzhu/gorm
+
 ## usage
 
 ```
