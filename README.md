@@ -32,5 +32,5 @@ install modules
 $ dep ensure -update
 
 server start
-$ go run server.go
+$ go run main.go
 ```
