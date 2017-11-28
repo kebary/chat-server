@@ -39,7 +39,7 @@ server start
 $ go run *.go
 
 format code
-$ go fmt
+$ go fmt ./...
 
 test
 $ go test
