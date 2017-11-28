@@ -41,13 +41,13 @@
   branch = "master"
   name = "golang.org/x/crypto"
   packages = ["acme","acme/autocert"]
-  revision = "b080dc9a8c480b08e698fb1219160d598526310f"
+  revision = "365904b0f3154c6e11a9cf541c9803d1dca0445a"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "4ff8c001ce4cc464e644b922325097228fce14d8"
+  revision = "a204229cd828a74741ee7b5da9bf4794497f85ed"
 
 [solve-meta]
   analyzer-name = "dep"
