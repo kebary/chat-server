@@ -1,6 +1,7 @@
-package main
+package routes
 
 import (
+	"app/migration"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
@@ -37,14 +38,16 @@ func getTalk(c echo.Context) error {
 		panic("failed to connect database")
 	}
 	defer db.Close()
-	var talks []Talk
+	var talks []migration.Talk
 	return c.JSON(http.StatusOK, db.Find(&talks))
 }
 
-func routes() {
-	Echo.GET("/", func(c echo.Context) error {
-		return c.String(http.StatusOK, "Hello, World!")
-	})
+func index(c echo.Context) error {
+	return c.String(http.StatusOK, "Hello, World!")
+}
+
+func Routes(Echo *echo.Echo) {
+	Echo.GET("/", index)
 	Echo.POST("/login", authenticate)
 	Echo.GET("/talk", getTalk)
 }

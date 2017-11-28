@@ -1,6 +1,8 @@
 package main
 
 import (
+	"app/migration"
+	"app/routes"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	"github.com/labstack/echo"
@@ -13,7 +15,7 @@ var (
 
 func init() {
 	// db
-	Migration()
+	migration.Migration()
 	createSample()
 }
 
@@ -24,7 +26,7 @@ func createSample() {
 	}
 	defer db.Close()
 	// Create
-	db.Create(&Talk{Msg: "サンプル"})
+	db.Create(&migration.Talk{Msg: "サンプル"})
 
 	// Read
 	// var product Product
@@ -43,7 +45,7 @@ func main() {
 	Echo.Use(middleware.Logger())
 	Echo.Use(middleware.Recover())
 	// routes
-	routes()
+	routes.Routes(Echo)
 	// start
 	Echo.Logger.Fatal(Echo.Start(":1323"))
 }
