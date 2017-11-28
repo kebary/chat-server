@@ -32,5 +32,12 @@ install modules
 $ dep ensure -update
 
 server start
-$ go run main.go
+$ go run *.go
+```
+
+## api
+
+```
+login
+$ curl -X POST -d 'username=test' -d 'password=test' localhost:1323/login
 ```
