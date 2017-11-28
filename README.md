@@ -33,6 +33,12 @@ $ dep ensure -update
 
 server start
 $ go run *.go
+
+format code
+$ go fmt
+
+test
+$ go test
 ```
 
 ## api
