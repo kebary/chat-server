@@ -1,10 +1,9 @@
 package routes
 
 import (
+	"app/db"
 	"app/db/scheme"
 	jwt "github.com/dgrijalva/jwt-go"
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/sqlite"
 	"github.com/labstack/echo"
 	"net/http"
 	"time"
@@ -33,13 +32,8 @@ func authenticate(c echo.Context) error {
 }
 
 func getTalk(c echo.Context) error {
-	db, err := gorm.Open("sqlite3", "test.db")
-	if err != nil {
-		panic("failed to connect database")
-	}
-	defer db.Close()
 	var talks []scheme.Talk
-	return c.JSON(http.StatusOK, db.Find(&talks))
+	return c.JSON(http.StatusOK, db.Database.Find(&talks))
 }
 
 func index(c echo.Context) error {
