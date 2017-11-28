@@ -1,7 +1,7 @@
 package routes
 
 import (
-	"app/migration"
+	"app/db/scheme"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/sqlite"
@@ -38,7 +38,7 @@ func getTalk(c echo.Context) error {
 		panic("failed to connect database")
 	}
 	defer db.Close()
-	var talks []migration.Talk
+	var talks []scheme.Talk
 	return c.JSON(http.StatusOK, db.Find(&talks))
 }
 

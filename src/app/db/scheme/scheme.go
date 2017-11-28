@@ -1,4 +1,4 @@
-package migration
+package scheme
 
 import "github.com/jinzhu/gorm"
 
