@@ -13,8 +13,8 @@ func main() {
 	// Middleware
 	Echo.Use(middleware.Logger())
 	Echo.Use(middleware.Recover())
-  // routes
+	// routes
 	routes()
-  // start
+	// start
 	Echo.Logger.Fatal(Echo.Start(":1323"))
 }

@@ -1,10 +1,10 @@
 package main
 
 import (
-	"net/http"
-	"time"
 	jwt "github.com/dgrijalva/jwt-go"
 	"github.com/labstack/echo"
+	"net/http"
+	"time"
 )
 
 func authenticate(c echo.Context) error {
@@ -30,7 +30,7 @@ func authenticate(c echo.Context) error {
 }
 
 func routes() {
-  Echo.GET("/", func(c echo.Context) error {
+	Echo.GET("/", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
 	Echo.POST("/login", authenticate)
