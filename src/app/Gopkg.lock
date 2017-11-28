@@ -8,6 +8,18 @@
   version = "v3.1.0"
 
 [[projects]]
+  name = "github.com/jinzhu/gorm"
+  packages = [".","dialects/sqlite"]
+  revision = "5174cc5c242a728b435ea2be8a2f7f998e15429b"
+  version = "v1.0"
+
+[[projects]]
+  branch = "master"
+  name = "github.com/jinzhu/inflection"
+  packages = ["."]
+  revision = "1c35d901db3da928c72a72d8458480cc9ade058f"
+
+[[projects]]
   name = "github.com/labstack/echo"
   packages = [".","middleware"]
   revision = "0473c51f1dbd83487effce00702571d19033a6e5"
@@ -32,6 +44,12 @@
   version = "v0.0.3"
 
 [[projects]]
+  name = "github.com/mattn/go-sqlite3"
+  packages = ["."]
+  revision = "ed69081a91fd053f17672236b0dd52ba7485e1a3"
+  version = "v1.4.0"
+
+[[projects]]
   branch = "master"
   name = "github.com/valyala/bytebufferpool"
   packages = ["."]
@@ -51,6 +69,12 @@
 
 [[projects]]
   branch = "master"
+  name = "golang.org/x/net"
+  packages = ["context"]
+  revision = "fc492d2e106922eb3aa4bca863d55e882c087ae3"
+
+[[projects]]
+  branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
   revision = "a204229cd828a74741ee7b5da9bf4794497f85ed"
@@ -58,6 +82,6 @@
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  inputs-digest = "290f16563ddb3f65233ff330bdaaa167909bb85e1fbbeaf08ffd2cd2fb80991f"
+  inputs-digest = "108edb4fc5b3142c6a2c464fec4f360583dcb53f6c71d520df4f382719c36d16"
   solver-name = "gps-cdcl"
   solver-version = 1
