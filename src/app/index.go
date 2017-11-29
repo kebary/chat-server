@@ -2,16 +2,13 @@ package main
 
 import (
 	"app/db/migration"
-	"app/db/seeds"
 	"app/routes"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )
 
 func init() {
-	// db
 	migration.Migration()
-	seeds.CreateSample()
 }
 
 func main() {
