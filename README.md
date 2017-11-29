@@ -48,6 +48,10 @@ $ go test
 ## api
 
 ```
-login
+/login
 $ curl -X POST -d 'username=test' -d 'password=test' localhost:1323/login
+
+/talk
+$ curl -X GET localhost:1323/talk
+$ curl -X POST -d 'msg=curl create message' localhost:1323/talk
 ```
