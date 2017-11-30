@@ -55,7 +55,7 @@ $ go test
 
 ```
 /login
-$ curl -X POST -d 'username=test' -d 'password=test' localhost:1323/login
+$ curl -X POST -H 'Content-Type: application/json' -d '{"username":"test","password":"test"}' localhost:1323/login
 
 /talk
 $ curl -X GET localhost:1323/api/v1/talk -H "Authorization: Bearer token"
