@@ -20,6 +20,10 @@ https://github.com/labstack/echo
 
 https://github.com/jinzhu/gorm
 
+## live reload
+
+https://github.com/pilu/fresh
+
 ## usage
 
 ```
@@ -36,7 +40,9 @@ install modules
 $ dep ensure -update
 
 server start
-$ go run *.go
+$ fresh
+（command not foundと言われた下記を参照してPATH設定を）
+https://github.com/pilu/fresh/issues/74
 
 format code
 $ go fmt ./...
