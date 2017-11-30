@@ -1,4 +1,4 @@
-package login
+package authenticate
 
 import (
 	jwt "github.com/dgrijalva/jwt-go"
@@ -7,9 +7,20 @@ import (
 	"time"
 )
 
-func Post(c echo.Context) error {
-	username := c.FormValue("username")
-	password := c.FormValue("password")
+type (
+	User struct {
+	  Username string `json:"username"`
+	  Password string `json:"password"`
+	}
+)
+
+func Post(c echo.Context) (err error)  {
+	u := new(User)
+  if err = c.Bind(u); err != nil {
+    return err
+  }
+	username := u.Username
+	password := u.Password
 	if username == "test" && password == "test" {
 		// Create token
 		token := jwt.New(jwt.SigningMethodHS256)

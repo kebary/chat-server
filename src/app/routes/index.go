@@ -1,8 +1,8 @@
 package routes
 
 import (
-	"app/controllers/api/v1/login"
-	"app/controllers/api/v1/root"
+	"app/controllers/api/authenticate"
+	"app/controllers/root"
 	"app/controllers/api/v1/talk"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
@@ -10,7 +10,7 @@ import (
 
 func Routes(Echo *echo.Echo) {
 	Echo.GET("/", root.Get)
-	Echo.POST("/login", login.Post)
+	Echo.POST("/api/authenticate", authenticate.Post)
 	apis := Echo.Group("/api/v1")
 	apis.Use(middleware.JWT([]byte("UNnx5PbFtH7b8HKazP")))
 	apis.GET("/talk", talk.Get)
