@@ -1,3 +1,5 @@
 /pkg
 **/vendor
 /src/**/*.db
+/bin
+**/tmp

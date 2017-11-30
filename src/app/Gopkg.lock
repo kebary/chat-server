@@ -71,13 +71,13 @@
   branch = "master"
   name = "golang.org/x/net"
   packages = ["context"]
-  revision = "894f8ed5849b15b810ae41e9590a0d05395bba27"
+  revision = "a8b9294777976932365dabb6640cf1468d95c70f"
 
 [[projects]]
   branch = "master"
   name = "golang.org/x/sys"
   packages = ["unix"]
-  revision = "1006bb3484c92b19a5b6612452e038b554fadb9c"
+  revision = "13fcbd661c8ececa8807a29b48407d674b1d8ed8"
 
 [solve-meta]
   analyzer-name = "dep"
